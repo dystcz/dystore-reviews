@@ -1,13 +1,13 @@
 <?php
 
-namespace Dystcz\LunarApiReviews\Domain\Reviews\Facades;
+namespace Dystore\Reviews\Domain\Reviews\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Dystcz\LunarApiReviews\Skeleton\SkeletonClass
+ * @see \Dystore\Reviews\Skeleton\SkeletonClass
  */
-class LunarApiReview extends Facade
+class Review extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class LunarApiReview extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'lunar-api-reviews';
+        return 'dystore-reviews';
     }
 }
