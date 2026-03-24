@@ -7,6 +7,7 @@ use Dystore\Reviews\Domain\Reviews\Models\Review;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Lunar\Facades\ModelManifest;
 
 trait InteractsWithReviews
 {
@@ -16,7 +17,7 @@ trait InteractsWithReviews
     public function reviews(): MorphMany
     {
         /** @var Model $this */
-        return $this->morphMany(Review::modelClass(), 'purchasable');
+        return $this->morphMany(ModelManifest::get(Review::class), 'purchasable');
     }
 
     /**
