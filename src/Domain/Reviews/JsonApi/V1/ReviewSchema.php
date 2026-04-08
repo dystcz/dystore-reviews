@@ -159,7 +159,7 @@ class ReviewSchema extends Schema
     public function filters(): array
     {
         return [
-            WhereIdIn::make($this),
+            WhereIdIn::make()->delimiter(','),
             WhereIdNotIn::make($this, 'except'),
             WhereNull::make('without_purchasable', 'purchasable_type'),
             PurchasableOrGeneric::make('purchasable_or_generic'),
